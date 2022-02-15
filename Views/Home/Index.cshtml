@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="input-group">
+    <label for="" class="col-12 col-form-label col-noPadding">上傳Excel：</label>
+    <input type="file" id="excelFile" name="excelFile" accept=".xls,.xlsx">
+    <button type="button" id="importExlBTN" >送出</button>
+</div>
+
+
+
+<div class="input-group">
+    <label for="" class="col-12 col-form-label col-noPadding">上傳檔案：(可多選)</label>
+    <input type="file" id="files" name="files" multiple accept=".mp3,.m4a">
+   
+</div>
+ <button type="button" id="importfileBTN" >送出</button>
+
+
+
+
+<div class="importResult success"><i class="fas fa-check-circle"></i>共<span id="successCount"></span>筆資料匯入/修改成功</div>
+<div class="importResult fail"><i class="fas fa-times-circle"></i>共<span id="failedCount"></span>欄資料匯入/修改失敗</div>
+<div class="importResultDetail">
+    <div id="resultMsg"></div>
+</div>
+
+
+
+@section Scripts{
+<script src="~/js/jquery.filer.js"></script> @*插件檔案*@
+<script src="~/js/upload.js"></script>
+}
